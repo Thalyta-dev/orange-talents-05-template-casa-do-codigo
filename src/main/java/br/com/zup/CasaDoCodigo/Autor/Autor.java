@@ -28,10 +28,10 @@ public class Autor {
 
     public Autor() { }
 
-    public Autor(AutorDTO autorDTO) {
-        this.nome = autorDTO.getNome();
-        this.email = autorDTO.getEmail();
-        this.descricao = autorDTO.getDescricao();
+    public Autor(AutorRequest autorRequest) {
+        this.nome = autorRequest.getNome();
+        this.email = autorRequest.getEmail();
+        this.descricao = autorRequest.getDescricao();
 
     }
 

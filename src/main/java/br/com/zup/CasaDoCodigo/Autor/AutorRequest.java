@@ -4,13 +4,11 @@ package br.com.zup.CasaDoCodigo.Autor;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import java.time.LocalDateTime;
 
 
-public class AutorDTO {
+
+public class AutorRequest {
 
     @NotEmpty(message = "Nome não pode ser nulo")
     private String nome;
@@ -24,15 +22,8 @@ public class AutorDTO {
     private String descricao;
 
 
-    public String getNome() {
-        return nome;
-    }
-
     public String getEmail() {
         return email;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
 }
