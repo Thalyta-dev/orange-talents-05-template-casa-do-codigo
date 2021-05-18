@@ -25,15 +25,14 @@ public class Autor {
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime dataHora = LocalDateTime.now();
 
-
     public Autor() { }
 
-    public Autor(AutorRequest autorRequest) {
-        this.nome = autorRequest.getNome();
-        this.email = autorRequest.getEmail();
-        this.descricao = autorRequest.getDescricao();
-
+    public Autor(String nome, String email, String descricao) {
+        this.nome = nome;
+        this.email = email;
+        this.descricao = descricao;
     }
+
 
 
 }

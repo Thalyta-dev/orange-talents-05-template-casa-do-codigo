@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/Autores")
+@RequestMapping("/autores")
 public class AutorController {
 
     private final AutorRepository autorRepository;
@@ -29,7 +29,8 @@ public class AutorController {
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
     public void save(@RequestBody @Valid AutorRequest autorRequest){
-        Autor autor = autorRepository.save(new Autor(autorRequest));
+        System.out.println(autorRequest.getDescricao());
+        Autor autor = autorRepository.save(autorRequest.toModel());
 
     }
 
