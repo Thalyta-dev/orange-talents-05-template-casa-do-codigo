@@ -1,5 +1,8 @@
-package br.com.zup.CasaDoCodigo.Autor;
+package br.com.zup.CasaDoCodigo.NaoUtilizado;
 
+import br.com.zup.CasaDoCodigo.Autor.Autor;
+import br.com.zup.CasaDoCodigo.Autor.AutorRepository;
+import br.com.zup.CasaDoCodigo.Autor.AutorRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.validation.Errors;

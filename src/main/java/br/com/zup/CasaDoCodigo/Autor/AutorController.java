@@ -1,11 +1,12 @@
 package br.com.zup.CasaDoCodigo.Autor;
 
+import br.com.zup.CasaDoCodigo.NaoUtilizado.ProibeEmailDublicadoValidador;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import javax.validation.Valid;
 
 @RestController
@@ -27,9 +28,8 @@ public class AutorController {
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.OK)
+    @Transactional
     public void save(@RequestBody @Valid AutorRequest autorRequest){
-        System.out.println(autorRequest.getDescricao());
         Autor autor = autorRepository.save(autorRequest.toModel());
 
     }

@@ -1,6 +1,7 @@
 package br.com.zup.CasaDoCodigo.Autor;
 
 
+import br.com.zup.CasaDoCodigo.Validacao.ValorUnico;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
@@ -16,6 +17,7 @@ public class AutorRequest {
 
     @NotBlank(message = "Email não pode ser nulo")
     @Email(message = "Email fora do padrão")
+    @ValorUnico(domainClass = Autor.class, fieldName = "email")
     private String email;
 
     @NotBlank
