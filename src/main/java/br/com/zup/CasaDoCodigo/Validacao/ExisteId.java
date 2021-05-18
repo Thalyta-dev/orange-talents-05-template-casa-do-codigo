@@ -7,14 +7,13 @@ import java.lang.annotation.*;
 @Documented
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = UniqueValueValidator.class)
+@Constraint(validatedBy = ExistIdValidator.class)
 
-public @interface ValorUnico {
+public @interface ExisteId {
 
-    String message() default  "Este atributo está com valores repetidos";
+    String message() default  "Este id não está no banco";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
     String fieldName();
     Class<?> domainClass();
-
 }

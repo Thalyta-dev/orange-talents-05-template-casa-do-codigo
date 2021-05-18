@@ -7,4 +7,5 @@ import java.util.Optional;
 
 public interface CategoriaRepository extends CrudRepository<Categoria, Long> {
     Optional<Categoria> findByNome(String nome);
+
 }

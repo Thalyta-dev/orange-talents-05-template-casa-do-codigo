@@ -9,7 +9,6 @@ import javax.validation.constraints.NotEmpty;
 
 public class CategoriaRequest {
 
-
     @NotBlank(message = "Nome não pode ser nulo")
     @ValorUnico(domainClass = Categoria.class, fieldName = "nome")
     private String nome;
