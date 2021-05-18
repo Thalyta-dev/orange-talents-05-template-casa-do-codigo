@@ -40,5 +40,15 @@ public class LivroController {
         livroRepository.save(livroRequest.toModel(autorRepository,categoriaRepository));
     }
 
+    @GetMapping
+    public List<LivroResponse> getLivros(){
+
+        List<Livro> livros = (List<Livro>) livroRepository.findAll();
+
+        return livros.stream().map(LivroResponse::new).collect(Collectors.toList());
+
+
+    }
+
 
 }
