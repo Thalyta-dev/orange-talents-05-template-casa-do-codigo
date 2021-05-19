@@ -49,6 +49,15 @@ public class LivroController {
 
 
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<LivroDetalhado> livroDetalhado(@PathVariable Long id){
+        Optional<Livro> livro = livroRepository.findById(id);
+
+        if (livro.isPresent()){
+            return  ResponseEntity.ok(new LivroDetalhado(livro.get()));
+        }
+        return  ResponseEntity.notFound().build();
+    }
 
 
 }

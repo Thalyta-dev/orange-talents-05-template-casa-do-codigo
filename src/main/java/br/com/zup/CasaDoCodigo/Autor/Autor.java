@@ -21,11 +21,11 @@ public class Autor {
     @Column(nullable = false, length = 400, columnDefinition = "text")
     private String descricao;
 
-
-
     @Column(nullable = false)
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime dataHora = LocalDateTime.now();
+
+
 
     public Autor() { }
 
@@ -42,6 +42,13 @@ public class Autor {
         this.descricao = descricao;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
 
 
 }

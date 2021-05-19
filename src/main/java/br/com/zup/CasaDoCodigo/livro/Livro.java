@@ -27,7 +27,6 @@ public class Livro {
 
     @Column(nullable = true)
     private int numeroPagina;
-
     @Column(nullable = true )
     private Double preco;
 
@@ -61,6 +60,29 @@ public class Livro {
 
     public String getTitulo() {
         return titulo;
+    }
+
+    public String getResumo() {
+        return  resumo;
+    }
+    public String getSumario() {
+        return sumario;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public int getNumeroPagina() {
+        return numeroPagina;
+    }
+
+    public Double getPreco() {
+        return preco;
+    }
+
+    public Autor getAutor() {
+        return autor;
     }
 
 }

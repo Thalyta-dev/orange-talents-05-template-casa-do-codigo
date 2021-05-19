@@ -38,4 +38,7 @@ public class AutorRequest {
         return  new Autor(this.nome, this.email, this.descricao);
     }
 
+    public  AutorRequest(Autor autor) {
+
+    }
 }
