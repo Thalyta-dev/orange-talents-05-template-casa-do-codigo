@@ -3,9 +3,10 @@ package br.com.zup.CasaDoCodigo.Validacao;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
+import java.util.List;
 
 @Documented
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = ExistIdValidator.class)
 

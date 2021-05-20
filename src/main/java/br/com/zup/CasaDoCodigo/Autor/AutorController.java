@@ -1,9 +1,4 @@
 package br.com.zup.CasaDoCodigo.Autor;
-
-import br.com.zup.CasaDoCodigo.NaoUtilizado.ProibeEmailDublicadoValidador;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
@@ -19,13 +14,6 @@ public class AutorController {
         this.autorRepository = autorRepository;
     }
 
-    @Autowired
-    private ProibeEmailDublicadoValidador proibeEmailDublicado;
-
-    @InitBinder
-    public void init(WebDataBinder binder){
-        binder.addValidators(proibeEmailDublicado);
-    }
 
     @PostMapping
     @Transactional
