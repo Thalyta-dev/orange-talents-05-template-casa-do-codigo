@@ -2,7 +2,6 @@ package br.com.zup.CasaDoCodigo.Categoria;
 
 import org.springframework.web.bind.annotation.*;
 
-import javax.transaction.Transactional;
 import javax.validation.Valid;
 
 @RestController
@@ -17,7 +16,6 @@ public class CategoriaController {
     }
 
     @PostMapping
-    @Transactional
     public void save(@RequestBody @Valid CategoriaRequest categoriaRequest){
         categoriaRepository.save(categoriaRequest.toModel());
 

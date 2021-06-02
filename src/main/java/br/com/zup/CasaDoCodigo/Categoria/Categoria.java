@@ -1,10 +1,6 @@
 package br.com.zup.CasaDoCodigo.Categoria;
 
-import br.com.zup.CasaDoCodigo.Autor.AutorRequest;
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 public class Categoria {
@@ -19,11 +15,6 @@ public class Categoria {
     public Categoria() {
     }
 
-
-    public Categoria(Long id, String nome) {
-        this.id = id;
-        this.nome = nome;
-    }
 
     public Categoria(String nome) {
         this.nome = nome;

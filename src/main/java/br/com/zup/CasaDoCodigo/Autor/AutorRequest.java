@@ -28,6 +28,14 @@ public class AutorRequest {
         return email;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
     public AutorRequest(String nome, String email, String descricao) {
         this.nome = nome;
         this.email = email;
